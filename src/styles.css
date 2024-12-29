@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+* a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  display: grid;
+  place-items: center; /* Centraliza horizontal e verticalmente */
+  height: 100vh; /* 100% da altura da tela */
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #464646;
+}
+
+.header {
+  width: 1136px;
+  height: 88px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+}
+
+.boas-vindas {
+  width: 1136px;
+  height: 368px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.boas-vindas h1 {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 62px;
+  color: #464646;
+}
+.boas-vindas p {
+  width: 751px;
+  height: 52px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+.boas-vindas .resumo-boas-vindas {
+  width: 751px;
+  height: 246px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-sobre-mim {
+  width: 100%;
+  height: 383px;
+  padding: 64px;
+  gap: 10px;
+  background-color: #EAF2FD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-sobre-mim .sobre-mim {
+  display: flex;
+  flex-direction: column;
+  width: 1136px;
+  height: 255px;
+  gap: 16px;
+}
+.section-sobre-mim .sobre-mim .paragrafo-sobre {
+  width: 751px;
+  height: 133px;
+}
+.section-sobre-mim .sobre-mim .paragrafo-sobre p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.section-sobre-mim .sobre-mim .paragrafo-sobre img {
+  margin-top: 10px;
+}
+
+.skills, .hobbies {
+  width: 1136px;
+  height: 244px;
+  gap: 32px;
+}
+.skills h3, .hobbies h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills .itens, .skills .hobbies, .hobbies .itens, .hobbies .hobbies {
+  display: flex;
+  gap: 16px;
+}
+.skills .box, .skills .hobbies, .hobbies .box, .hobbies .hobbies {
+  width: 176px;
+  height: 174px;
+  padding: 16px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  border-radius: 10px;
+}
+
+.formacao {
+  width: 100%;
+  height: 581px;
+  padding: 82px;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #EAF2FD;
+}
+.formacao .nome-da-formacao {
+  color: #464646;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+}
+.formacao .status-da-formacao {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+.formacao .box-itens-formacao {
+  width: 1136px;
+  height: 347px;
+  gap: 16px;
+  display: flex;
+}
+.formacao .box-formacao {
+  width: 368px;
+  height: 347px;
+  gap: 8px;
+}
+
+.experiencia-profissional {
+  width: 100%;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.experiencia-profissional .img-exp {
+  width: 752px;
+  height: 406px;
+}
+.experiencia-profissional .div-exp {
+  width: 1136px;
+  height: 406px;
+  gap: 16px;
+  display: flex;
+  align-items: center;
+}
+.experiencia-profissional .info-decodificador {
+  display: flex;
+  flex-direction: column;
+  width: 348px;
+  height: 112px;
+  gap: 8px;
+}
+.experiencia-profissional .info-decodificador .p-decodificador {
+  font-weight: 700;
+  color: #464646;
+  font-size: 22px;
+}
+.experiencia-profissional .info-decodificador .botoes {
+  display: flex;
+  gap: 16px;
+}
+.experiencia-profissional .info-decodificador .botao-decodificador1 {
+  width: 105px;
+  height: 51px;
+  padding: 16px;
+  gap: 10px;
+  cursor: pointer;
+  color: #2A7AE4;
+}
+.experiencia-profissional .info-decodificador .botao-decodificador2 {
+  width: 105px;
+  height: 51px;
+  padding: 16px;
+  gap: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: #2A7AE4;
+}
+
+.meu-contato {
+  display: flex;
+  width: 100%;
+  height: 788px;
+  padding: 64px;
+  gap: 10px;
+  background-color: #EAF2FD;
+  align-items: center;
+  justify-content: center;
+}
+.meu-contato .div-contato {
+  width: 1136px;
+  height: 660px;
+  gap: 16px;
+  padding-top: 64px;
+  display: flex;
+}
+.meu-contato .div-contato img {
+  width: 464px;
+  height: 593px;
+}
+.meu-contato .div-contato .info-contato {
+  display: flex;
+  flex-direction: column;
+  width: 656px;
+  height: 596px;
+}
+.meu-contato form {
+  height: 397px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.meu-contato form input {
+  height: 56px;
+}
+.meu-contato form input[id=message] {
+  height: 133px;
+}
+.meu-contato form input[type=submit] {
+  width: 165px;
+  height: 51px;
+  background-color: #2A7AE4;
+  border: none;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: linear-gradient(150deg, #5b76a8, #4589b6);
+  bottom: 0px;
+  width: 100%;
+  height: 102px;
+  padding: 32px;
+  gap: 10px;
+}
+.footer .footer:hover {
+  background: linear-gradient(150deg, #5b76a8, #4589b6); /* Inverte o gradiente ao passar o mouse */
+}/*# sourceMappingURL=styles.css.map */

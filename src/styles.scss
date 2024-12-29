@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+$cor-section-azul: #EAF2FD;
+$cor-h3: #464646;
+$cor-do-botao-submit: #2A7AE4;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+main {
+    display: grid;
+    place-items: center;   /* Centraliza horizontal e verticalmente */
+    height: 100vh;         /* 100% da altura da tela */
+
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: $cor-h3;
+}
+
+.header {
+    width: 1136px;
+    height: 88px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.links {
+    display: flex;
+    gap: 32px;
+}
+
+.boas-vindas {
+    width: 1136px;
+    height: 368px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    h1 {
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 62px;
+        color: $cor-h3;
+    }
+
+    p {
+        width: 751px;
+        height: 52px;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+
+    .resumo-boas-vindas {
+        width: 751px;
+        height: 246px;
+        gap: 24px;
+
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.section-sobre-mim {
+    width: 100%;
+    height: 383px;
+    padding: 64px;
+    gap: 10px;
+    background-color: $cor-section-azul;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .sobre-mim {
+        display: flex;
+        flex-direction: column;
+        width: 1136px;
+        height: 255px;
+        gap: 16px;
+    
+        .paragrafo-sobre {
+            width: 751px;
+            height: 133px;
+    
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            img {
+                margin-top: 10px;
+            }
+        }
+    }  
+}
+
+.skills {
+    width: 1136px;
+    height: 244px;
+    gap: 32px;
+
+    h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .itens {
+        display: flex;
+        gap: 16px;
+    }
+
+    .box {
+        width: 176px;
+        height: 174px;
+        padding: 16px;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        border-radius: 10px;
+
+        // i {
+        //     width: 24px;
+        //     height: 37px;
+        // }
+    }
+}
+
+.hobbies {
+    @extend .skills;
+    @extend .itens;
+    @extend .box;
+}
+
+.formacao {
+    width: 100%;
+    height: 581px;
+    padding: 82px;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $cor-section-azul;
+
+
+    .nome-da-formacao {
+        color: $cor-h3;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .status-da-formacao {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .box-itens-formacao {
+        width: 1136px;
+        height: 347px;
+        gap: 16px;
+        display: flex;
+    }
+
+    .box-formacao {
+        width: 368px;
+        height: 347px;
+        gap: 8px;
+    }
+}
+
+.experiencia-profissional {
+    width: 100%;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+    .img-exp {
+        width: 752px;
+        height: 406px;
+    }
+    
+    .div-exp {
+        width: 1136px;
+        height: 406px;
+        gap: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .info-decodificador {
+        display: flex;
+        flex-direction: column;
+        width: 348px;
+        height: 112px;
+        gap: 8px;
+
+        .p-decodificador {
+            font-weight: 700;
+            color: $cor-h3;
+            font-size: 22px;
+        }
+
+        .botoes {
+            display: flex;
+            gap: 16px;
+        }
+
+        .botao-decodificador1 {
+            width: 105px;
+            height: 51px;
+            padding: 16px;
+            gap: 10px;
+            
+            cursor: pointer;
+            color: $cor-do-botao-submit;
+        }
+
+        .botao-decodificador2 {
+            width: 105px;
+            height: 51px;
+            padding: 16px;
+            gap: 10px;
+            
+            cursor: pointer;
+            color: white;
+            background-color: $cor-do-botao-submit;
+        }
+    }
+
+
+}
+
+.meu-contato {
+    display: flex;
+    width: 100%;
+    height: 788px;
+    padding: 64px;
+    gap: 10px;
+    background-color: $cor-section-azul;
+    align-items: center;
+    justify-content: center;
+
+
+    .div-contato {
+        width: 1136px;
+        height: 660px;
+        gap: 16px;
+        padding-top: 64px;
+        display: flex;
+
+        img {
+            width: 464px;
+            height: 593px;
+        }
+
+        .info-contato {
+            display: flex;
+            flex-direction: column;
+            width: 656px;
+            height: 596px;
+        }
+
+    }
+
+    form {
+        height: 397px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        input {
+            height: 56px;
+        }
+    
+        input[id="message"] {
+            height: 133px;
+        }
+
+        input[type=submit] {
+            width: 165px;
+            height: 51px;
+            background-color: $cor-do-botao-submit;
+            border: none;
+            color: white;
+        }
+    }
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    // background-color: #746363;
+    background: linear-gradient(150deg, #5b76a8, #4589b6);
+
+    bottom: 0px;
+    width: 100%;
+    height: 102px;
+    padding: 32px;
+    gap: 10px;
+    
+    .footer:hover {
+        background: linear-gradient(150deg, #5b76a8, #4589b6); /* Inverte o gradiente ao passar o mouse */
+    }
+
+}
