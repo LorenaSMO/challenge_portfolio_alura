@@ -10,16 +10,16 @@
 <body>
     <header class="header">
         <img src="assets/Logo.png" alt="Logo do site">
-        <div class="links">
+        <nav class="header__navbar">
             <a href="#section-sobre">Sobre mim</a>
             <a href="#section-skills">Skills</a>
             <a href="#section-hobbies">Hobbies</a>
             <a href="#section-formacao">Formação</a>
             <a href="#section-projetos">Projetos</a>
             <a href=""><b>contato@fulana.com</b></a>
-        </div>
+        </nav>
     </header>
-    <main>
+    <main class="main">
         <section class="boas-vindas">
             <div class="resumo-boas-vindas">
                 <h1>Olá, meu nome é Fulana de Tal e construo páginas web</h1>
@@ -71,10 +71,9 @@
                     <i class="fa-brands fa-css"></i>
                     <p>CSS</p>
                 </div>
-
             </div>
         </section>
-        <section id="section-hobbies" class="hobbies">
+        <section id="section-hobbies" class="section-hobbies">
             <h3>Hobbies</h3>
             <div class="itens">
                 <div class="box">
@@ -145,15 +144,26 @@
                     <p>Quer entrar em contato comigo?</p>
                     <p>Preencha o formulário ao lado e entrarei em contato o mais rápido possível.</p>
                     <form action="">
-                        <input type="text" name="" id="" placeholder="Nome">
-                        <input type="email" name="" id="" placeholder="Email">
-                        <input type="text" name="" id="" placeholder="Assunto">
-                        <input type="text" name="" id="message" placeholder="Mensagem">
-                        <input type="submit" value="Enviar mensagem">
+                        <div class="campo-form">
+                            <input type="text" name="" id="name" required>
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="campo-form">
+                            <input type="email" name="" id="email" required>
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="campo-form">
+                            <input type="text" name="" id="assunto" required>
+                            <label for="assunto">Assunto</label>
+                        </div>
+                        <div class="campo-form">
+                            <input type="text" name="" id="message" required>
+                            <label for="message">Mensagem</label>
+                        </div>
                     </form>
+                    <button class="botao-enviar">Enviar mensagem</button>
                 </div>
             </div>
-            
         </section>
     </main>
     <footer class="footer">

@@ -11,17 +11,18 @@ $cor-do-botao-submit: #2A7AE4;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 
-    a {
+    a, li {
         text-decoration: none;
         color: inherit;
+        list-style-type: none;
     }
 }
 
-main {
-    display: grid;
-    place-items: center;   /* Centraliza horizontal e verticalmente */
-    height: 100vh;         /* 100% da altura da tela */
-
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h3 {
@@ -44,7 +45,7 @@ h3 {
 
 }
 
-.links {
+.header__navbar, .links {
     display: flex;
     gap: 32px;
 }
@@ -122,6 +123,7 @@ h3 {
     width: 1136px;
     height: 244px;
     gap: 32px;
+    margin-top: 30px;
 
     h3 {
         display: flex;
@@ -145,18 +147,15 @@ h3 {
         align-items: flex-start;
 
         border-radius: 10px;
-
-        // i {
-        //     width: 24px;
-        //     height: 37px;
-        // }
     }
 }
 
-.hobbies {
+.section-hobbies {
     @extend .skills;
     @extend .itens;
     @extend .box;
+
+    margin-bottom: 60px;
 }
 
 .formacao {
@@ -205,6 +204,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
     
     
     .img-exp {
@@ -259,8 +259,6 @@ h3 {
             background-color: $cor-do-botao-submit;
         }
     }
-
-
 }
 
 .meu-contato {
@@ -294,31 +292,67 @@ h3 {
         }
 
     }
-
+    
     form {
         height: 397px;
         display: flex;
         flex-direction: column;
         gap: 32px;
+        
+        .campo-form {
+            position: relative;
+        }
 
         input {
+            border: 0;
+            border-bottom: 3px solid #dfdfdf;
+            outline: none;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            cursor: text;
+            top: 0;
+            left: 0;
+            color: #424242;
+            transition: .3s ease-in-out;
+        }
+        
+        input, label {
+            font-size: 1em;
+            width: 100%;
             height: 56px;
+    
         }
     
+        input:focus + label,
+        input:valid + label {
+            font-size: .80em;
+            top: -20px;
+            pointer-events: none;
+        }
+
+        input:focus,
+        input:valid {
+            border-bottom: 3px solid #2A7AE4;
+        }
+        
         input[id="message"] {
             height: 133px;
         }
+    }
 
-        input[type=submit] {
-            width: 165px;
-            height: 51px;
-            background-color: $cor-do-botao-submit;
-            border: none;
-            color: white;
-        }
+    .botao-enviar {
+        width: 165px;
+        height: 51px;
+        background-color: $cor-do-botao-submit;
+        border: none;
+        color: white;
+        margin-top: 20px;
     }
 }
-
 
 .footer {
     display: flex;
@@ -326,18 +360,10 @@ h3 {
     justify-content: center;
     align-items: center;
 
-    position: fixed;
-    // background-color: #746363;
-    background: linear-gradient(150deg, #5b76a8, #4589b6);
-
-    bottom: 0px;
     width: 100%;
     height: 102px;
     padding: 32px;
     gap: 10px;
-    
-    .footer:hover {
-        background: linear-gradient(150deg, #5b76a8, #4589b6); /* Inverte o gradiente ao passar o mouse */
-    }
-
+    position: absolute;
+    background-color: #FFFF;
 }

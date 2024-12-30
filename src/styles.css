@@ -5,15 +5,17 @@
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
 }
-* a {
+* a, * li {
   text-decoration: none;
   color: inherit;
+  list-style-type: none;
 }
 
-main {
-  display: grid;
-  place-items: center; /* Centraliza horizontal e verticalmente */
-  height: 100vh; /* 100% da altura da tela */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h3 {
@@ -34,7 +36,7 @@ h3 {
   align-items: center;
 }
 
-.links {
+.header__navbar, .links {
   display: flex;
   gap: 32px;
 }
@@ -97,21 +99,22 @@ h3 {
   margin-top: 10px;
 }
 
-.skills, .hobbies {
+.skills, .section-hobbies {
   width: 1136px;
   height: 244px;
   gap: 32px;
+  margin-top: 30px;
 }
-.skills h3, .hobbies h3 {
+.skills h3, .section-hobbies h3 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.skills .itens, .skills .hobbies, .hobbies .itens, .hobbies .hobbies {
+.skills .itens, .skills .section-hobbies, .section-hobbies .itens, .section-hobbies .section-hobbies {
   display: flex;
   gap: 16px;
 }
-.skills .box, .skills .hobbies, .hobbies .box, .hobbies .hobbies {
+.skills .box, .skills .section-hobbies, .section-hobbies .box, .section-hobbies .section-hobbies {
   width: 176px;
   height: 174px;
   padding: 16px;
@@ -121,6 +124,10 @@ h3 {
   justify-content: flex-end;
   align-items: flex-start;
   border-radius: 10px;
+}
+
+.section-hobbies {
+  margin-bottom: 60px;
 }
 
 .formacao {
@@ -164,6 +171,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
 }
 .experiencia-profissional .img-exp {
   width: 752px;
@@ -243,18 +251,49 @@ h3 {
   flex-direction: column;
   gap: 32px;
 }
+.meu-contato form .campo-form {
+  position: relative;
+}
 .meu-contato form input {
+  border: 0;
+  border-bottom: 3px solid #dfdfdf;
+  outline: none;
+}
+.meu-contato form label {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  cursor: text;
+  top: 0;
+  left: 0;
+  color: #424242;
+  transition: 0.3s ease-in-out;
+}
+.meu-contato form input, .meu-contato form label {
+  font-size: 1em;
+  width: 100%;
   height: 56px;
+}
+.meu-contato form input:focus + label,
+.meu-contato form input:valid + label {
+  font-size: 0.8em;
+  top: -20px;
+  pointer-events: none;
+}
+.meu-contato form input:focus,
+.meu-contato form input:valid {
+  border-bottom: 3px solid #2A7AE4;
 }
 .meu-contato form input[id=message] {
   height: 133px;
 }
-.meu-contato form input[type=submit] {
+.meu-contato .botao-enviar {
   width: 165px;
   height: 51px;
   background-color: #2A7AE4;
   border: none;
   color: white;
+  margin-top: 20px;
 }
 
 .footer {
@@ -262,14 +301,10 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  background: linear-gradient(150deg, #5b76a8, #4589b6);
-  bottom: 0px;
   width: 100%;
   height: 102px;
   padding: 32px;
   gap: 10px;
-}
-.footer .footer:hover {
-  background: linear-gradient(150deg, #5b76a8, #4589b6); /* Inverte o gradiente ao passar o mouse */
+  position: absolute;
+  background-color: white;
 }/*# sourceMappingURL=styles.css.map */
